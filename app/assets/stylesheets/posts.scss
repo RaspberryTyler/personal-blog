@@ -1,0 +1,54 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px;
+    a {
+        font-size: 18px;
+        color: inherit;
+        text-decoration: none;
+        font-weight: bold;
+    }
+}
+
+main {
+    padding: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+article {
+    padding-bottom: 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    line-height: 1.2;
+}
+
+time {
+    font-weight: bold;
+}
+
+.post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

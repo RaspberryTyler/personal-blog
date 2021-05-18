@@ -2,6 +2,11 @@
 
 This is a personal blog that I'm building with Rails to force myself to learn Ruby and the Rails framework. I'm a big fan of Hugo's workflow for editing blogs as version-controllable static files, so I'm trying to build a similar structure and this probably looks nothing like a Rails app. It's just for learning though, and I get to learn more than I ever wanted to know about deploying Ruby to a server.
 
+To run the database migrations, run the following command:
+```
+bin/rails db:migrate
+```
+
 To import the blog posts into the SQLite database, run the following commmand:
 ```
 rake posts:import

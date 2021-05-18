@@ -38,3 +38,10 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+# Ignore the environment variables
+.rbenv-vars
+
+# Ignore post drafts
+/app/content/drafts/*
+!/app/content/drafts/.keep

@@ -6,6 +6,7 @@ class CreatePosts < ActiveRecord::Migration[6.1]
       t.text :slug
       t.string :link
       t.datetime :published
+      t.string :status
 
       t.timestamps
     end

@@ -12,6 +12,22 @@ To import the blog posts into the SQLite database, run the following commmand:
 rake posts:import
 ```
 
+Since the database is constructed on the fly, you can destroy the whole schema and start fresh when you need to change schema. To re-run all migrations, run the following command:
+
+```
+bin/rails db:migrate:reset
+```
+
+In production, you'll need to add the following environment variable to completely rebuild the database:
+
+```
+DISABLE_DATABASE_ENVIRONMENT_CHECK=1
+```
+
+## Draft posts
+
+Draft posts that are not yet read to be stored in Git may be stored in `app/content/drafts`. Posts in these folder are not added to Git, and can be moved into `app/content` when you're ready to commit them.
+
 TODO: ADD THE FOLLOWING:
 
 * Ruby version

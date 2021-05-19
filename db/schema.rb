@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2021_05_09_225038) do
     t.text "slug"
     t.string "link"
     t.datetime "published"
+    t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

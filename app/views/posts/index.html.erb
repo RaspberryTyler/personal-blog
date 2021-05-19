@@ -3,7 +3,7 @@
 <ul class="post-list">
     <% @posts.each do |post| %>
         <article>
-            <h2><%= post.title %></h2>
+            <h2><%= post.title %><%= raw ' <span style="color: red;">(draft)</span>' if post.status == "draft" %></h2>
             <time datetime="<%= post.published.strftime("%Y-%m-%d") %>">
                 <%= post.published.strftime("%B %d, %Y") %>
             </time>

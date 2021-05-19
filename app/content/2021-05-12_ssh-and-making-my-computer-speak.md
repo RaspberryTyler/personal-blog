@@ -1,6 +1,6 @@
 ---
-title: "May 12: Not the day I expected"
-slug: may-12-not-the-day-i-expected
+title: "SSH and making my computer speak"
+slug: ssh-and-making-my-computer-speak
 tags: life
 published: 2021-05-12
 ---

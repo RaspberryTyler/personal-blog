@@ -1,4 +1,6 @@
-<h1>Tyler's posts</h1>
+<h1 class="homepage-title">Tyler's journal</h1>
+
+<p class="lead">This site is for my daily journal posts that aren't interesting enough for dev.to</p>
 
 <ul class="post-list">
     <% @posts.each do |post| %>
@@ -8,7 +10,7 @@
                 <%= post.published.strftime("%B %d, %Y") %>
             </time>
             <%= raw post.content.split("\n")[0] %>
-            <p><a href="/posts/<%= post.slug %>">Read post</a></p>
+            <p><%= link_to 'Read post', journal_entry_path(post.slug) %></p>
         </article>
     <% end %>
 </ul>

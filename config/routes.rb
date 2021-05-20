@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   get '', to: 'posts#index'
-  get '/posts/:slug', to: 'posts#show'
+  get '/journal/:slug', to: 'posts#show', as: 'journal_entry'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

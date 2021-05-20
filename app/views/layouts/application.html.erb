@@ -2,7 +2,8 @@
 <html>
   <head>
     <title>Blog</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,9 +12,16 @@
   </head>
 
   <body>
-    <header><a href="/">Tyler Smith</a></header>
+    <header>
+      <a href="/">Tyler Smith</a>
+    </header>
     <main>
       <%= yield %>
     </main>
+    <footer>
+      <p>
+      <a href="https://twitter.com/RaspberryTyler">Follow me on Twitter</a>
+      </p>
+    </footer>
   </body>
 </html>

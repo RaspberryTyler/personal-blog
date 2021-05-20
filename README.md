@@ -18,15 +18,22 @@ Since the database is constructed on the fly, you can destroy the whole schema a
 bin/rails db:migrate:reset
 ```
 
+## Draft posts
+
+Draft posts that are not yet read to be stored in Git may be stored in `app/content/drafts`. Posts in these folder are not added to Git, and can be moved into `app/content` when you're ready to commit them.
+
+## Development
+
+Run `yarn start` to start development. This will start Webpack dev server, and give automatic page reloads and post imports when things change.
+
+## Production
+
 In production, you'll need to add the following environment variable to completely rebuild the database:
 
 ```
 DISABLE_DATABASE_ENVIRONMENT_CHECK=1
 ```
 
-## Draft posts
-
-Draft posts that are not yet read to be stored in Git may be stored in `app/content/drafts`. Posts in these folder are not added to Git, and can be moved into `app/content` when you're ready to commit them.
 
 TODO: ADD THE FOLLOWING:
 

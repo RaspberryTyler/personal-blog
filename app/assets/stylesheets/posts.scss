@@ -43,6 +43,19 @@ h6 {
     line-height: 1.2;
 }
 
+pre {
+    overflow-x: auto;
+    background-color: #eee;
+    padding: 1em 2em;
+}
+
+p > code {
+    display: inline-block;
+    background-color: #eee;
+    padding: .1em .5em;
+    border-radius: .5em;
+}
+
 time {
     font-weight: bold;
 }

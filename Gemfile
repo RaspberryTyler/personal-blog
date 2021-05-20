@@ -57,4 +57,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Tyler's dependencies
 gem 'front_matter_parser'
-gem 'redcarpet', '~> 3.5', '>= 3.5.1'
+gem 'commonmarker'

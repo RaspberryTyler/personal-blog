@@ -274,14 +274,6 @@ rbenv rehash
 rbenv global 2.7.2
 ```
 
-## Installing Bundler
-
-Install Bundler:
-
-```
-gem install bundler
-```
-
 ## Installing Gems
 
 Next, install the missing Gems with Bundle:

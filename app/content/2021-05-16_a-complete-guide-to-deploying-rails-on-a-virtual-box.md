@@ -1,6 +1,6 @@
 ---
 title: A complete guide to deploying Rails on an Ubuntu VirtualBox VM
-slug: a-complete-guide-to-deplopying-rails-on-a-virtual-box
+slug: a-complete-guide-to-deploying-rails-on-a-virtual-box
 tags: rails, linux, virtualbox
 published: 2021-05-16
 ---

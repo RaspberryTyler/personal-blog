@@ -1,6 +1,6 @@
 ---
-title: "This site is live at last!"
-slug: this-site-is-live-at-last
+title: "This blog is live at last!"
+slug: this-blog-is-live-at-last
 tags:
 published: 2021-05-22
 ---

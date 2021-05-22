@@ -1,6 +1,6 @@
 ---
-title: "This site is live!"
-slug: this-site-is-live!
+title: "This site is on a server!"
+slug: this-site-is-on-a-server
 tags: rails
 published: 2021-05-20
 ---
@@ -17,7 +17,7 @@ I wonder what the differences are between `groupadd` and `addgroup`. For the tim
 
 ## 2. You can hide directory contents
 
-I guess I've always known thism but I've never seen it in action. I copied my root `.ssh` directory to my new user's directory, changed the owner to my new user, then I discovered no one else could access it. It made me think about the way I'm starting my Rails app right now. I created a `webadmin` group that could access the app folder, but since the Puma service runs as my user, it has access to everything my user has access to, including my `.ssh` folder. 
+I guess I've always known thism but I've never seen it in action. I copied my root `.ssh` directory to my new user's directory, changed the owner to my new user, then I discovered no one else could access it. It made me think about the way I'm starting my Rails app right now. I created a `webadmin` group that could access the app folder, but since the Puma service runs as my user, it has access to everything my user has access to, including my `.ssh` folder.
 
 I should rethink this setup, and maybe create a `webadmin` user than runs the app, and continue setting the app's folder group to `webadmin`. I'm not sure.
 

@@ -15,9 +15,9 @@ Download the Ubuntu Server image from the [Canonical Ubuntu Server page](https:/
 
 ## Configuring VirtualBox
 
-Open VirtualBox then select the "New" icon using the application toolbar. 
+Open VirtualBox then select the "New" icon using the application toolbar.
 
-Enter an appropriate name for the VM, and keep the default machine folder. 
+Enter an appropriate name for the VM, and keep the default machine folder.
 
 Select **Linux** for **Type** and select **Ubuntu (64 bit)** for **Version**. This will not install the OS on your VM, but [it will set up a VM with sensible defaults](https://superuser.com/a/617346).
 
@@ -33,13 +33,13 @@ While each format has pros and cons, there is some amount of interoperability, a
 
 The VM is now created.
 
-Select the VM from the left-hand sidebar, then click "Settings" from the application toolbar. 
+Select the VM from the left-hand sidebar, then click "Settings" from the application toolbar.
 
 Navigate to the **Network** tab in the left-hand sidebar. Go to the **Advanced** settings under **Adapter 1**, then click the **Port Forwarding** button.
 
 Add the following configuration, changing the **Host Port** values to whatever you please:
- 
-| Name | Protocol | Host IP   | Host Port | Guest IP | Guest Port |
+
+| Name | Protocol |   Host IP | Host Port | Guest IP | Guest Port |
 | ---- | -------- | --------: | --------: | -------: | ---------: |
 | SSH  | TCP      | 127.0.0.1 |      2222 |          |         22 |
 | HTTP | TCP      | 127.0.0.1 |      2223 |          |         80 |
@@ -117,7 +117,7 @@ sudo ufw app list
 It should return the following:
 
 ```
-Available applications: 
+Available applications:
   Nginx Full
   Nginx HTTP
   Nginx HTTPS
@@ -286,7 +286,6 @@ bundle install
 
 Run `yarn`.
 
-
 ## Setting the app environment variables
 
 Create `.rbenv-vars` in the root of the project directory. Add the following:
@@ -300,7 +299,7 @@ The second command will allow the Rails server to serve static files. This will 
 
 ## Precompiling assets
 
-If you ran the app now, you'd have an error. That's because in production, we must precompile our app. 
+If you ran the app now, you'd have an error. That's because in production, we must precompile our app.
 
 Run the following command in your project folder:
 
@@ -312,7 +311,7 @@ bin/rails assets:precompile
 
 In your local copy of the site, copy the contents of `config/master.key` and place in your projects `config` folder on the VM.
 
-## Run  migrations
+## Run migrations
 
 If you already ran you migrations before you set your app to production, you'll need to run them again.
 
@@ -347,6 +346,7 @@ ExecStart=/usr/bin/bash -lc 'eval "$(rbenv init -)"; bin/rails server'
 [Install]
 WantedBy=multi-user.target
 ```
+
 The `Type` must be set to `simple`. The `ExecStart` feels like a hack, but it's the best I can come up with right now.
 
 The commands listed below can be used to control the newly-created Puma service. These were copied from the [Puma systemd configuration docs](https://github.com/puma/puma/blob/master/docs/systemd.md).

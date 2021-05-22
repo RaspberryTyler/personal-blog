@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog</title>
+    <title>
+      <% if content_for? :page_title -%>
+        <%= yield :page_title  -%> | Tinker log
+      <% else -%>
+        Tinker log
+      <% end -%>
+    </title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="robots" content="noindex" />
     <%= csrf_meta_tags %>

@@ -1,3 +1,7 @@
+<%= content_for :page_title do %>
+  <%= @post.title -%>
+<% end %>
+
 <article>
     <h1><%= @post.title %></h1>
     <time datetime="<%= @post.published.strftime("%Y-%m-%d") %>">

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <% if ENV.fetch('RAILS_ENV', 'development') == 'production' -%>
+      <script async defer data-domain="tinkerlog.dev" src="https://analytics.tinkerlog.dev/js/plausible.js"></script>
+    <% end -%>
     <title>
-      <% if ENV.fetch('RAILS_ENV', 'development') == 'production' -%>
-        <script async defer data-domain="tinkerlog.dev" src="https://analytics.tinkerlog.dev/js/plausible.js"></script>
-      <% end -%>
       <% if content_for? :page_title -%>
         <%= yield :page_title  -%> | Tinker log
       <% else -%>

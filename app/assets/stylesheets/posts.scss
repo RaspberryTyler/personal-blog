@@ -86,9 +86,13 @@ footer {
   text-align: center;
 }
 
-.homepage-title {
+.homepage__title {
   font-size: 4rem;
   line-height: 1;
+}
+
+.homepage__article-title {
+  margin-bottom: 0.5em;
 }
 
 .lead {

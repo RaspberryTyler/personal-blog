@@ -1,4 +1,4 @@
-<h1 class="homepage-title">
+<h1 class="homepage__title">
     Tinker log
 </h1>
 
@@ -8,7 +8,7 @@
     <% @posts.each do |post| %>
         <li>
             <article>
-                <h2>
+                <h2 class="homepage__article-title">
                     <a href="<%= url_for journal_entry_path(post.slug) %>" class="post-title-link">
                         <%= post.title %><%= raw ' <span style="color: red;">(draft)</span>' if post.status == "draft" %>
                     </a>
@@ -16,8 +16,8 @@
                 <time datetime="<%= post.published.strftime("%Y-%m-%d") %>">
                     <%= post.published.strftime("%B %d, %Y") %>
                 </time>
-                <%= raw post.content.split("\n")[0] %>
-                <p><%= link_to 'Read post', journal_entry_path(post.slug) %></p>
+                <%# <%= raw post.content.split("\n")[0] %>
+                <%# <p><%= link_to 'Read post', journal_entry_path(post.slug) %></p>
             </article>
         </li>
     <% end %>

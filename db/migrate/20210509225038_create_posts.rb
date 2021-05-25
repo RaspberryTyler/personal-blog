@@ -7,8 +7,9 @@ class CreatePosts < ActiveRecord::Migration[6.1]
       t.string :link
       t.datetime :published
       t.string :status
-
       t.timestamps
     end
+
+    add_index :posts, :slug, :unique => true
   end
 end

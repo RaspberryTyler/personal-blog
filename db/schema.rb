@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2021_05_09_225038) do
     t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["slug"], name: "index_posts_on_slug", unique: true
   end
 
 end

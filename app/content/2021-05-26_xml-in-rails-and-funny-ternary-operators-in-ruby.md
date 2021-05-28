@@ -16,7 +16,7 @@ Rails controller actions have an optional `respond_to` block, and you can set re
 
 Controllers can also respond to XML.
 
-```rb
+```ruby
 respond_to do |format|
   format.xml
 end

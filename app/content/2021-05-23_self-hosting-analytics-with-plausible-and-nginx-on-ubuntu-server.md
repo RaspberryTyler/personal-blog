@@ -128,7 +128,7 @@ Like Docker, I'm copying from the [Plausible Self-Hosting Guide](https://plausib
 
 To keep things simple, we're going to install everything in our user's home directory. From your home directory, run the following:
 
-```
+```sh
 git clone https://github.com/plausible/hosting
 cd hosting
 ```
@@ -139,7 +139,7 @@ The `ADMIN_USER_EMAIL`, `ADMIN_USER_NAME` and `ADMIN_USER_PWD` fields will be us
 
 Run `nano plausible-conf.env` to set these fields.
 
-```
+```sh
 ADMIN_USER_EMAIL=tyler@example.com
 ADMIN_USER_NAME=tyler
 ADMIN_USER_PWD=kmw6W4nkuV!GqC-mczCyARYZ
@@ -147,7 +147,7 @@ ADMIN_USER_PWD=kmw6W4nkuV!GqC-mczCyARYZ
 
 Next, set the `BASE_URL` to the URL where you'd like to access the dashboard.
 
-```
+```sh
 BASE_URL=https://your-site.com
 ```
 
@@ -159,7 +159,7 @@ openssl rand -base64 64
 
 Put the command's output in your configuration file as the value for `SECRET_KEY_BASE`. **If the output of the command was broken into multiple lines, put it all on a single line.**
 
-```
+```txt
 SECRET_KEY_BASE=WwnVrGNWl/Q2rqL18+tPqRP3hXInVpZ7uA9jywV5nGVqrdgJaSM5zAnA59c2oeDlGtu5NalOemWc+stD6M0IPg==
 ```
 
@@ -186,13 +186,13 @@ sudo apt install nginx
 
 Next we'll create an nginx configuration file for our site using `nano`.
 
-```
+```sh
 sudo nano /etc/nginx/sites-available/your-site.com
 ```
 
 We'll use the [Plausible nginx example](https://github.com/plausible/hosting/blob/master/reverse-proxy/nginx/plausible) as a template:
 
-```
+```txt
 server {
 	# replace example.com with your domain name
 	server_name your-site.com;
@@ -221,7 +221,7 @@ sudo nginx -t
 
 Restart nginx:
 
-```
+```sh
 sudo systemctl restart nginx
 ```
 
@@ -278,7 +278,7 @@ sudo ufw enable
 
 Next, run `sudo ufw status`. You should see the following returned:
 
-```
+```txt
 Status: active
 
 To                         Action      From

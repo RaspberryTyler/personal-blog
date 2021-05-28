@@ -5,7 +5,7 @@ tags:
 published: 2021-05-27
 ---
 
-One of the perks of having a full-time job during the past year is that I've been able to order books guilt-free. One of the drawbacks of having a full-time job is that I haven't had much opportunity to read them. If I wanted to dig into GoF Design Patterns, that's all I'd have time for outside of work for a month. I've started many of these books, then stopped a quarter of the way through when my job would get particularly chaotic.
+One of the perks of having a full-time job during the past year is that I've been able to purchase books guilt-free. One of the drawbacks of having a full-time job is that I haven't had much opportunity to read them. If I wanted to dig into GoF Design Patterns, that's all I'd have time for outside of work for a month. I've started many of these books, then stopped a quarter of the way through when my job would get particularly chaotic.
 
 With my current job wrapping up soon, I'll be taking some time off. One of my biggest priorities during this time is to read influential books about software development. I'd also plan to read many books covering entreprenuership and the business of software development.
 

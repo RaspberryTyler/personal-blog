@@ -15,19 +15,19 @@ Here are the books that I intend to complete before the end of 2021.
 
 ## Coding books
 
+- Working in Public ✅️
+- Practical Object-Oriented Design 🔖️
 - GoF Design Patterns
 - Domain Driven Design
 - Clean Code
 - Refactoring
 - Domain Specific Languages
 - Patterns of Enterprise Application Architecture
-- Practical Object-Oriented Design
 - Head First Design Patterns (GoF is hard, okay?)
 - Cracking the Coding Interview, 6th Edition
 - The Mythical Man-Month
 - Mastering Ubuntu Server
 - Smalltalk Best Practice Patterns
-- Working in Public
 
 ## Business and entreprenuership books
 

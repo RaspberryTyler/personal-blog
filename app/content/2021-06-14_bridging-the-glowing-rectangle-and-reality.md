@@ -11,7 +11,7 @@ The project that inspired me to code was a site for listing local open mics. I b
 
 The ideas that fire me up don't live on a screen; instead, the screen is a facilitator of real-world interactions. I've spent years thinking about how cool it would be to build touch-screen information terminals for small companies to show off their products. Digital signage for restaurant menus excites me. Ideas about home automation pump me up. Building augmented reality and interactivity for museums sounds unbelievably rad.
 
-These are a stark contrast to big tech apps that have kept us glued to our screens in a state of perpetual anxiety, anger and loneliness as algorithms feed us low-value content that we've become addicted to.
+These are a stark contrast to big tech apps that have kept us glued to our screens in a state of perpetual anxiety, anger and loneliness as algorithms feed us low-value content to which we've become addicted.
 
 I want to build things that cross the digital threshold. I want to build technologies that enrich our real world experiences rather than keep us trapped in front of our computers and desperately grasping for our phones.
 

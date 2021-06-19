@@ -35,6 +35,10 @@ Little Caesars is every bit as greasy and gross as I remember. It's perfect. It'
 
 The Popeyes chicken sandwich is exactly as good as I remember it. No complains. The spicy version is better than the non-spicy version.
 
+## Taco La Villa: 11 stars
+
+[It's every bit as good as I remember](/journal/taco-la-villa).
+
 ---
 
 Overall, I'll be eating at home much more often in a post-pandemic world. This list will be updated as I continue to retry foods from my pre-pandemic life.

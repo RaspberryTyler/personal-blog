@@ -17,7 +17,7 @@ What if I didn't have to do any of this?
 
 ## Go's super power: a single binary
 
-Go compiles to a single binary. It's runtime and dependencies get included in the binary, which means it doesn't need to be overly concerned with the state of the machine that it runs on as long as it's compiled for the right OS and CPU architecture. Rather than sacrificing a gigabyte of disk space to install a language interpreter and your application's dependencies on the server, you can instead upload a single 5 megabyte executable.
+Go compiles to a single binary. It's runtime and dependencies get included in the binary, which means it doesn't need to be overly concerned with the state of the machine that it runs on as long as it's compiled for the right OS and CPU architecture. Rather than sacrificing a gigabyte of disk space to install a language interpreter and your application's dependencies on the server, you can instead upload a single 5-megabyte executable.
 
 Being a compiled language doesn't mean that Go solves every problem: if we wanted to coordinate multiple services with Docker the way that SacMusic does, there will still be added complexity. But Go's executables afford an interesting capability: you can run a Go application in a container without a base image. Because the application dependencies are compiled into source, Go apps don't need anything else from the operating system's userspace: they can talk to the kernel directly. Yet running a Go application with Docker still provides the benefits of isolating the process from the host machine by shoving it in its own cgroup. For simple APIs, a Python/Flask image will likely be 100x larger than its Go counterpart, and the Python API will be much slower. Orchestrating multiple applications with Docker Compose may still be daunting, but configuring the Golang pieces theoretically may be simpler.
 
@@ -25,6 +25,6 @@ Being a compiled language doesn't mean that Go solves every problem: if we wante
 
 Go's lightweight and high-performance characteristics make it seem like it could be a great fit for running small services on Raspberry Pis. Pis have inexpensive processors, and installing dependencies on Pis is painfully slow because of the limited I/O of the SD card. Golang's concurrency allows it to be fast on inexpensive processors, and a Go app can be install quickly because it's a small single-file binary.
 
-While I don't see Go as a reasonable replacement for batteries included frameworks like Django, Laravel or Rails, it could talk to one of these frameworks over REST or gRPC.
+While I don't see Go as a reasonable replacement for batteries-included frameworks like Django, Laravel or Rails, it could talk to one of these frameworks over REST or gRPC.
 
 The deciding factor for if Go is a compelling option for Raspberry Pi development will be if it has support for the Pi's GPIO and hardware like the Pi Camera Module. Pis by themselves are great, but what makes them most exciting is their ability to make hardware do interesting things. I'll be excited if I can do that work with Go.

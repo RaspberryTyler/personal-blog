@@ -22,7 +22,7 @@ If we were to build our own legislator matching system, building it into the cor
 
 This is what Ruby on Rails creator [DHH might refer to as an Outpost](https://m.signalvnoise.com/the-majestic-monolith-can-become-the-citadel/): or a piece of functionality that is sufficiently different from the core application that it is an ideal candidate for extraction.
 
-Go could be an ideal fit to build a legislator matching Outpost. While the service would still be I/O bound, you could probably do just fine with caching before you needed any load balancing at all. And Go's standard library includes everything you need to set up a small RESTful API.
+Go could be an ideal fit to build a legislator-matching Outpost. While the service would still be I/O bound, you could probably do just fine with caching before you needed any load balancing at all. And Go's standard library includes everything you need to set up a small RESTful API.
 
 Go would probably pair well with JAMstack architecture too: you could pair a high-performance statically-rendered website with small high-performance services that offered the same scaling characteristics.
 

@@ -17,6 +17,8 @@ What if I didn't have to do any of this?
 
 ## Go's super power: a single binary
 
+[I recently wrote a post about not understanding when I'd use Golang](trying-to-understand-when-id-use-golang). Now I see how Go could eliminate an enormous amount of deployment complexity.
+
 Go compiles to a single binary. It's runtime and dependencies get included in the binary, which means it doesn't need to be overly concerned with the state of the machine that it runs on as long as it's compiled for the right OS and CPU architecture. Rather than sacrificing a gigabyte of disk space to install a language interpreter and your application's dependencies on the server, you can instead upload a single 5-megabyte executable.
 
 Being a compiled language doesn't mean that Go solves every problem: if we wanted to coordinate multiple services with Docker the way that SacMusic does, there will still be added complexity. But Go's executables afford an interesting capability: you can run a Go application in a container without a base image. Because the application dependencies are compiled into source, Go apps don't need anything else from the operating system's userspace: they can talk to the kernel directly. Yet running a Go application with Docker still provides the benefits of isolating the process from the host machine by shoving it in its own cgroup. For simple APIs, a Python/Flask image will likely be 100x larger than its Go counterpart, and the Python API will be much slower. Orchestrating multiple applications with Docker Compose may still be daunting, but configuring the Golang pieces theoretically may be simpler.

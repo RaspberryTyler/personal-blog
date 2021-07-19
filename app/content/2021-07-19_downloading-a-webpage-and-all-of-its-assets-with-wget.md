@@ -22,4 +22,10 @@ To go through the arguments one-by-one:
 - `--span-hosts` is the magic here: this tells `wget` to download the files from different hosts like the CDN
 - `--no-directories` downloads the files into a single flat and messy directory, which is perfect for my needs
 
+If you open `index.html` the assets will be broken: `--convert-links` doesn't seem to make these relative to the root directory. So to view the page, you'll need to start a webserver in the download directory. You can use the following command:
+
+```sh
+python3 -m http.server
+```
+
 The output is pretty messy and it might be quicker to just build something with Tailwind than clean this download up, but at least I know how to do this now.

@@ -21,7 +21,7 @@ I've _never_ experienced that kind of behavior when working with developers. I'm
 
 ## Imagining music without waste
 
-It's easy to focus on the wrong things in music. Writing a perfect song doesn't matter if you never perform. Full stop. Playing an amazing show won't do a damn thing if no one comes to it. Perfectionism prevented many of the most talented musicians I know from ever getting their careers off the ground. All they have to show for it is years of wasted effort.
+It's easy to focus on the wrong things in music. Writing a perfect song doesn't matter if you never perform. Full stop. Playing an amazing show won't do a damn thing if no one comes to it. Perfectionism prevented many of the most talented musicians I know from ever getting their music careers off the ground. All they have to show for it is years of wasted effort.
 
 Musicians could learn a lot from Agile and Lean principles. Bring five unpolished minimum viable songs to a gig and see how the audience reacts. Shorten feedback loops by gigging often to find out what's working and what's not with actual crowds. Polish the winners, cut the losers. Continuously deliver new songs, merch, and performances. Build, measure, learn.
 

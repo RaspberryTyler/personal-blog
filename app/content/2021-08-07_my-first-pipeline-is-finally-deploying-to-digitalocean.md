@@ -1,6 +1,6 @@
 ---
-title: "My pipeline is finally deploying to DigitalOcean"
-slug: my-pipeline-is-finally-deploying-to-digitalocean
+title: "My first pipeline is finally deploying to DigitalOcean"
+slug: my-first-pipeline-is-finally-deploying-to-digitalocean
 tags:
 published: 2021-08-07
 ---

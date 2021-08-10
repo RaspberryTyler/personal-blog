@@ -230,9 +230,9 @@ sudo systemctl restart nginx
 Certbot's official docs recommend installing Certbot with `snapd`, but nginx recommends installing with `apt`. We'll follow [nginx's Certbot installation instructions](https://www.nginx.com/blog/using-free-ssltls-certificates-from-lets-encrypt-with-nginx/).
 
 ```sh
-apt-get update
+sudo apt-get update
 sudo apt-get install certbot
-apt-get install python3-certbot-nginx
+sudo apt-get install python3-certbot-nginx
 ```
 
 Create a certificate for your domain. The `-d` flags are for domains. In the example below, we're creating a certificate for both the www and non-www versions of the domains. This is a good practice, but it isn't required.

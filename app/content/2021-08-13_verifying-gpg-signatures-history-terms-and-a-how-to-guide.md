@@ -115,6 +115,22 @@ SHA256(terraform_1.0.4_darwin_amd64.zip)= cf7c7750c6380a12d6a4534c63844c803f14f5
 
 This matches the checksum from the validated checksum file. We can be confident that this zip file is indeed the authentic file that Hashicorp produced.
 
+Alternatively, you could do all of this in one step:
+
+```
+shasum -a 256 -c terraform_1.0.4_SHA256SUMS
+```
+
+Which will return the following:
+
+```
+shasum -a 256 -c terraform_1.0.4_SHA256SUMS
+terraform_1.0.4_darwin_amd64.zip: OK
+...
+```
+
+There will be several lines of failures too, but look for the line that matches the file name that you are checking.
+
 ## Further reading
 
 I read a lot of interesting articles while writing this post. Here are some of the articles I looked at that you may also find interesting.

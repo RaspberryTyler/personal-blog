@@ -16,7 +16,7 @@ RUN curl -fsSL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get update && apt-get install -y nodejs 
 
 # Throw errors if Gemfile has been modified since Gemfile.lock
-RUN bundle config --global frozen 1
+# RUN bundle config --global frozen 1
 COPY Gemfile Gemfile.lock ./
 RUN bundle config set --local path 'vendor/bundle'
 RUN bundle install

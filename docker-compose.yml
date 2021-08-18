@@ -4,7 +4,9 @@ version: "3.9"
 
 services:
   tinkerlog:
+    container_name: tinkerlog-web
     image: tylerlwsmith:tinkerlog
+    restart: always
     build:
       context: ./rails
       target: development
@@ -12,3 +14,24 @@ services:
       - 3000:3000
     volumes:
       - ./rails:/app
+    depends_on:
+      - database
+    networks:
+      - tinkerlog
+
+  database:
+    container_name: tinkerlog-db
+    image: 13.4-alpine
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - database:/var/lib/postgresql/data
+    networks:
+      - tinkerlog
+
+networks:
+  tinkerlog:
+
+volumes:
+  database:

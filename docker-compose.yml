@@ -1,0 +1,14 @@
+# https://docs.docker.com/compose/compose-file/compose-file-v3/
+
+version: "3.9"
+
+services:
+  tinkerlog:
+    image: tylerlwsmith:tinkerlog
+    build:
+      context: ./rails
+      target: development
+    ports:
+      - 3000:3000
+    volumes:
+      - ./rails:/app

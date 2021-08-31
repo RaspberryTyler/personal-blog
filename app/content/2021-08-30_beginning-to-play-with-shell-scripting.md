@@ -13,11 +13,12 @@ I had originally worried that when I started learning Docker, Ansible and Terraf
 
 - Variables are global by default, but you can use the `local` keyword inside of functions to scope variables to that function.
 - The `shift` command nukes the first parameter that was passed through the shell. It's janky compared to named parameters. I messed this up a bunch causing weird errors
-- Commands like `getopts` create magic global variables like `$OPTARG`.
+- Commands like `getopts` create magic global variables like `$OPTARG`. For magic variables like `$OPTIND`, you may want to explicitly declare it as `local OPTIND=1` within a function because it doesn't automatically reset itself (I think).
 - I need to use quotes to reliably test strings for zero characters, using `[ -z "$variable" ]` instead of `[ -z $variable ]`.
 - Even though `if` is closed with `fi` and `case` is closed with `esac`, `do` is closed with `done` instead of `od`. Tight.
 - The whole `do-something > /dev/null 2>&1` always messed me up because it looked like I was redirecting `/dev/null` to standard out, but apparently it goes back to the start and sends everything to `/dev/null`. Wild.
 - You shouldn't use `which` in shell scripts apparently. You actually want to use `command -v executable`. Stack Exchange has [a thorough writeup on this](https://unix.stackexchange.com/questions/85249/why-not-use-which-what-to-use-then/85250#85250).
+- Functions don't hoist in Bash. I'm not surpised, but it kind of messes up my flow. I ended up creating a `main` function at the top and call it at the very bottom of the script. The whole script loads before `main` is called, so it works just fine when the function uses other functions declared below it.
 
 I'm incredibly tired, so I'm going to hit published and go to bed without proofreading. Typos are freedm.
 

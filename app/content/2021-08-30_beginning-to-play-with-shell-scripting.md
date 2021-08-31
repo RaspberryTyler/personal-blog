@@ -37,6 +37,6 @@ Here are what I think my next few steps are for SacMusic to get to [the top of t
 
 Once I knock these out, I'll have basically met my goals for leveling up my DevOps skills to where I want them to be (for now). After this, I plan to switch to just-in-time learning for DevOps, picking up new skills as I need them and not before. This rabbit hole goes too deep, and the tools I'm learning solve most of the technical pain points from my last job.
 
-Focusing on DevOps has caused me to stagnate on [application development](https://tinkerlog.dev/journal/i-am-an-applications-programmer), which is what I'm actually passionate about. And none of the things I'm building enrich people's lives (though these skills will certainly make my life more tolerable).
+Focusing on DevOps has caused me to stagnate on [application development](/journal/i-am-an-applications-programmer), which is what I'm actually passionate about. And none of the things I'm building enrich people's lives (though these skills will certainly make my life more tolerable).
 
-I'm eager to resume building things that [break free of the glowing rectangle](https://tinkerlog.dev/journal/bridging-the-glowing-rectangle-and-reality). I'm not sure what those things are yet. But I'm excited to find out.
+I'm eager to resume building things that [break free of the glowing rectangle](/journal/bridging-the-glowing-rectangle-and-reality). I'm not sure what those things are yet. But I'm excited to find out.

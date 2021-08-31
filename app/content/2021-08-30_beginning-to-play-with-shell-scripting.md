@@ -11,7 +11,7 @@ I had originally worried that when I started learning Docker, Ansible and Terraf
 
 ## Shell scripting notes
 
-- Variables are global by default.
+- Variables are global by default, but you can use the `local` keyword inside of functions to scope variables to that function.
 - The `shift` command nukes the first parameter that was passed through the shell. It's janky compared to named parameters. I messed this up a bunch causing weird errors
 - Commands like `getopts` create magic global variables like `$OPTARG`.
 - I need to use quotes to reliably test strings for zero characters, using `[ -z "$variable" ]` instead of `[ -z $variable ]`.
@@ -32,8 +32,8 @@ Here are what I think my next few steps are for SacMusic to get to [the top of t
 - Put the playbook in my Jenkins deployment pipeline.
 - Configure DataDog for logging.
 - Configure Rollbar (or _maybe_ Sentry) for error monitoring.
-- Tighten up my Nginx config
-- _Maybe_ build out my tests
+- Tighten up my Nginx config.
+- _Maybe_ build out my tests.
 
 Once I knock these out, I'll have basically met my goals for leveling up my DevOps skills to where I want them to be (for now). After this, I plan to switch to just-in-time learning for DevOps, picking up new skills as I need them and not before. This rabbit hole goes too deep, and the tools I'm learning solve most of the technical pain points from my last job.
 

@@ -28,6 +28,7 @@ I published this and was getting ready to go to bed, but then I realized that I 
 Here are what I think my next few steps are for SacMusic to get to [the top of the mountain](https://tinkerlog.dev/journal/the-top-of-the-mountain):
 
 - Create an Ansible playbook for configuring newly provisioned server.
+- Make Jenkins pipeline tag newly built images as `latest` in addition to their current tags.
 - Create a playbook that dynamically grabs DigitalOcean inventory and deploys the latest images to the server.
 - Put the playbook in my Jenkins deployment pipeline.
 - Configure DataDog for logging.

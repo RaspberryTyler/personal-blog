@@ -7,7 +7,7 @@ published: 2021-08-30
 
 I'm super tired. But I built a small Bash CLI today. It would have been way easier to build in JavaScript or Python, but I'm trying to build all of my SacMusic stuff for maximum compatability. I want to make very few assumptions about the development OS. I'm even going as far as putting Terraform and Ansible in containers so I don't have to install them on the host OS. The Bash CLI that I built was actually a wrapper around my containerized Terraform and Ansible that makes it nicer to interact with from the host.
 
-I had originally worried that when I started learning Docker, Ansible and Terraform that I'd get much weaker with my shell skills, or at least stop improving. The completely opposite has been true: I've learned much more about Linux and the shell than I've ever known from using these tools. While I'm still new to all of these tools and I'm novice at shell scripting, it strikes me that I've learned more about development and operations than I ever reasonably imagined I would when I started programming five years ago. Wild
+I had originally worried that when I started learning Docker, Ansible and Terraform that I'd get much weaker with my shell skills, or at least stop improving. The completely opposite has been true: I've learned much more about Linux and the shell than I've ever known from using these tools. While I'm still new to all of these tools and I'm novice at shell scripting, it strikes me that I've learned more about development and operations than I ever reasonably imagined I would when I started programming five years ago. Wild.
 
 ## Shell scripting notes
 
@@ -20,3 +20,23 @@ I had originally worried that when I started learning Docker, Ansible and Terraf
 - You shouldn't use `which` in shell scripts apparently. You actually want to use `command -v executable`. Stack Exchange has [a thorough writeup on this](https://unix.stackexchange.com/questions/85249/why-not-use-which-what-to-use-then/85250#85250).
 
 I'm incredibly tired, so I'm going to hit published and go to bed without proofreading. Typos are freedm.
+
+## Next steps
+
+I published this and was getting ready to go to bed, but then I realized that I forgot to mention: I got Terraform all set up to provision my DigitalOcean infrastructure. And it works inside a container using the Bash CLI that I built.
+
+Here are what I think my next few steps are for SacMusic to get to [the top of the mountain](https://tinkerlog.dev/journal/the-top-of-the-mountain):
+
+- Create an Ansible playbook for configuring newly provisioned server.
+- Create a playbook that dynamically grabs DigitalOcean inventory and deploys the latest images to the server.
+- Put the playbook in my Jenkins deployment pipeline.
+- Configure DataDog for logging.
+- Configure Rollbar (or _maybe_ Sentry) for error monitoring.
+- Tighten up my Nginx config
+- _Maybe_ build out my tests
+
+Once I knock these out, I'll have basically met my goals for leveling up my DevOps skills to where I want them to be (for now). After this, I plan to switch to just-in-time learning for DevOps, picking up new skills as I need them and not before. This rabbit hole goes too deep, and the tools I'm learning solve most of the technical pain points from my last job.
+
+Focusing on DevOps has caused me to stagnate on [application development](https://tinkerlog.dev/journal/i-am-an-applications-programmer), which is what I'm actually passionate about. And none of the things I'm building enrich people's lives (though these skills will certainly make my life more tolerable).
+
+I'm eager to resume building things that [break free of the glowing rectangle](https://tinkerlog.dev/journal/bridging-the-glowing-rectangle-and-reality). I'm not sure what those things are yet. But I'm excited to find out.

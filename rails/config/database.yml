@@ -24,6 +24,14 @@ test:
   <<: *default
   database: db/test.sqlite3
 
+# production:
+#   <<: *default
+#   database: db/production.sqlite3
+
 production:
-  <<: *default
-  database: db/production.sqlite3
+  host: database
+  adapter: postgresql
+  database: tinkerlog
+  username: admin
+  password: admin
+  pool: 5

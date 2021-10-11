@@ -1,0 +1,40 @@
+# https://docs.docker.com/compose/compose-file/compose-file-v3/
+
+version: "3.9"
+
+services:
+  tinkerlog:
+    container_name: tinkerlog-web
+    image: tylerlwsmith:tinkerlog
+    command: "bin/rails server -b 0.0.0.0"
+    restart: always
+    environment:
+      - RAILS_ENV=production
+      - MASTER_KEY=${MASTER_KEY}
+    ports:
+      - 3000:3000
+    depends_on:
+      - database
+    networks:
+      - tinkerlog
+
+  database:
+    container_name: tinkerlog-db
+    image: postgres:13.4-alpine
+    restart: always
+    environment:
+      - POSTGRES_DB=${DATABASE}
+      - POSTGRES_USER=${DATABASE_USERNAME}
+      - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
+    ports:
+      - 5432:5432
+    volumes:
+      - tinkerlog-database:/var/lib/postgresql/data
+    networks:
+      - tinkerlog
+
+networks:
+  tinkerlog:
+
+volumes:
+  tinkerlog-database:

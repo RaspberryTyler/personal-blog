@@ -3,6 +3,7 @@
 services:
   tinkerlog:
     build:
-      target: development
+      target: production
     environment:
       - RAILS_ENV=production
+      - MASTER_KEY=${MASTER_KEY}

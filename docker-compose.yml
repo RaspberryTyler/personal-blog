@@ -9,7 +9,7 @@ services:
     restart: always
     build:
       context: ./rails
-      target: development
+      target: production
     environment:
       - RAILS_ENV=development
     ports:

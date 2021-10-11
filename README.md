@@ -10,6 +10,7 @@ Run the following commands after first cloning the project:
 
 ```sh
 docker-compose build
+docker-compose run --rm yarn
 docker-compose run --rm tinkerlog bundle install
 docker-compose run --rm tinkerlog bin/rails db:migrate
 docker-compose up
@@ -20,7 +21,15 @@ docker-compose up
 Run the following command:
 
 ```sh
-docker-compose -f docker-compose.yml -f docker-compose.prod.yml build
+docker-compose -f docker-compose.yml -f docker-compose.build.yml build
+```
+
+## Running the production image
+
+Run the following command:
+
+```sh
+docker-compose -f docker-compose.prod.yml up
 ```
 
 ## More information

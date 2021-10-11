@@ -29,7 +29,7 @@ COPY Gemfile Gemfile.lock ./
 RUN bundle config set --local path 'vendor/bundle'
 RUN bundle install
 
-COPY package.json package-lock.json ./
+COPY package.json yarn.lock ./
 RUN yarn
 
 CMD ["bin/rails", "server", "-b", "0.0.0.0"]
@@ -47,3 +47,6 @@ RUN bin/rails assets:precompile
 ####################
 FROM development as production
 COPY . /app
+
+# https://devcenter.heroku.com/articles/deploying-rails-applications-with-the-puma-web-server#procfile
+CMD ["bundle", "exec", "puma", "-b", "0.0.0.0", "-C", "config/puma.rb"]

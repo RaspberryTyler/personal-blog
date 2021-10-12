@@ -1,3 +1,5 @@
+#! /bin/bash
+
 if docker-compose ps | grep -q tinkerlog-webserver
 then 
     docker-compose exec -w /etc/caddy webserver caddy fmt --overwrite

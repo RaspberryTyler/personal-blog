@@ -6,7 +6,6 @@ services:
   webapp:
     container_name: tinkerlog-webapp
     image: "tylerlwsmith/tinkerlog-webapp:${BUILD_TAG:-latest}"
-    image: tylerlwsmith:tinkerlog
     # restart: always
     build:
       context: ./webapp
@@ -25,22 +24,22 @@ services:
     networks:
       - tinkerlog
 
-  # webserver:
-  #   container_name: tinkerlog-webserver
-  #   image: "tylerlwsmith/tinkerlog-webserver:${BUILD_TAG:-latest}"
-  #   # restart: always
-  #   build:
-  #     context: ./webserver
-  #     target: development
-  #   environment:
-  #     - APP_URL=${APP_URL}
-  #   ports:
-  #     - "8080:8080"
-  #   volumes:
-  #     - ./webserver/Caddyfile:/etc/caddy/Caddyfile
-  #     - ./webapp/public:/srv/app/public
-  #     - caddy_data:/data
-  #     - caddy_config:/config
+  webserver:
+    container_name: tinkerlog-webserver
+    image: "tylerlwsmith/tinkerlog-webserver:${BUILD_TAG:-latest}"
+    # restart: always
+    build:
+      context: ./webserver
+      target: development
+    environment:
+      - APP_URL=${APP_URL}
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./webserver/Caddyfile:/etc/caddy/Caddyfile
+      - ./webapp/public:/srv/app/public
+      - caddy_data:/data
+      - caddy_config:/config
 
   database:
     container_name: tinkerlog-db

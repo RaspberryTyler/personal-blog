@@ -1,10 +1,12 @@
-${APP_URL} {
-  # https://stackoverflow.com/a/68203783/7759523
-  encode zstd gzip
-  root * /srv/app/public
-  file_server
-  @notStatic {
-     not file
-  }
-  reverse_proxy @notStatic webapp:3000
+http://localhost:8080 {
+        # https://stackoverflow.com/a/68203783/7759523
+        encode zstd gzip
+        root * /srv/app/public
+        file_server
+
+        @notStatic {
+                not file
+        }
+
+        reverse_proxy @notStatic tinkerlog-webapp:3000
 }

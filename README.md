@@ -43,7 +43,6 @@ The read me that explains how the rails app works is in the Rails folder. This d
 My todo list for tomorrow:
 
 - Maybe use non-root user in Rails dockerfile
-- Figure out what to do with rbenv files and vars
 
 - Move blogs from current site to this Docker branch
 

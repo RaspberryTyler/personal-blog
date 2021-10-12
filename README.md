@@ -31,3 +31,19 @@ Run the following script:
 ## More information
 
 The read me that explains how the rails app works is in the Rails folder. This dockerization is a work in progress.
+
+## Todo
+
+My todo list for tomorrow:
+
+- Figure out if that hosts thing I added to the config was actually necessary
+- Try to get variable interpolation to work in caddyfile url
+- Maybe use non-root user in Rails dockerfile
+- Create an `.env.example` file
+- Figure out what to do with rbenv files and vars
+
+- Move blogs from current site to this Docker branch
+
+- Create repos on Docker Hub
+- Configure Ansible setup script
+- Configure Terraform setup script

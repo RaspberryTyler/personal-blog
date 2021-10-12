@@ -6,30 +6,26 @@ My personal blog. Built on Rails, Postgres, Docker and duct tape.
 
 When first pulling down you'll need to install the dependencies in the host OS.
 
-Run the following commands after first cloning the project:
+Run the following script after first cloning the project:
 
 ```sh
-docker-compose build
-docker-compose run --rm webapp yarn
-docker-compose run --rm webapp bundle install
-docker-compose run --rm webapp bin/rails db:migrate
-docker-compose up
+./scripts/setup-local.sh
 ```
 
 ## Building the production images
 
-Run the following command:
+Run the following script:
 
 ```sh
-docker-compose -f docker-compose.yml -f docker-compose.build.yml build
+./scripts/build-prod.sh
 ```
 
 ## Running the production image
 
-Run the following command:
+Run the following script:
 
 ```sh
-docker-compose -f docker-compose.prod.yml up
+./scripts/run-prod.sh
 ```
 
 ## More information

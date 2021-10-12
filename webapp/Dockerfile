@@ -17,6 +17,8 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
   && apt update \
   && apt install yarn
 
+RUN bundle config set --local path 'vendor/bundle'
+
 # Prevents restarts if `server.pid` already exists and creates `master.key` file.
 # https://docs.docker.com/samples/rails/
 COPY entrypoint.sh /usr/bin/
@@ -33,7 +35,6 @@ FROM development as production
 # Throw errors if Gemfile has been modified since Gemfile.lock
 # RUN bundle config --global frozen 1
 COPY Gemfile Gemfile.lock ./
-RUN bundle config set --local path 'vendor/bundle'
 RUN bundle install
 
 COPY package.json yarn.lock ./

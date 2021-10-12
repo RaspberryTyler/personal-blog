@@ -21,8 +21,11 @@
 **/obj
 **/secrets.dev.yaml
 **/values.dev.yaml
+
+
 README.md
 /vendor/bundle
+/logs/*
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key

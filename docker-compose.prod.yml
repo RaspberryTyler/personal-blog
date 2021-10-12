@@ -27,11 +27,10 @@ services:
     environment:
       - APP_URL=${APP_URL}
     ports:
-      # - "80:80"
-      # - "443:443"
+      - "80:80"
+      - "443:443"
       - "8080:8080"
     volumes:
-      # - ./webserver/Caddyfile:/etc/caddy/Caddyfile
       - caddy_data:/data
       - caddy_config:/config
     networks:

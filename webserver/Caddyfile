@@ -1,7 +1,7 @@
 # The problem I'm trying to solve.
 # https://caddy.community/t/reverse-proxy-without-domain-name/7951/10
 
-http://0.0.0.0:8080 {
+{$APP_URL} {
 	# https://stackoverflow.com/a/68203783/7759523
 	encode zstd gzip
 	root * /srv/app/public

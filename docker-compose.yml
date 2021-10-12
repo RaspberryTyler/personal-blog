@@ -6,7 +6,7 @@ services:
   webapp:
     container_name: tinkerlog-webapp
     image: "tylerlwsmith/tinkerlog-webapp:${BUILD_TAG:-latest}"
-    # restart: always
+    restart: always
     build:
       context: ./webapp
       target: development
@@ -27,7 +27,7 @@ services:
   webserver:
     container_name: tinkerlog-webserver
     image: "tylerlwsmith/tinkerlog-webserver:${BUILD_TAG:-latest}"
-    # restart: always
+    restart: always
     build:
       context: ./webserver
       target: development
@@ -35,7 +35,6 @@ services:
       - APP_URL=${APP_URL}
     ports:
       - "8080:8080"
-      - "80:80"
     volumes:
       - ./webserver/Caddyfile:/etc/caddy/Caddyfile
       - ./webapp/public:/srv/app/public
@@ -47,7 +46,7 @@ services:
   database:
     container_name: tinkerlog-db
     image: postgres:13.4-alpine
-    # restart: always
+    restart: always
     environment:
       - POSTGRES_DB=${DATABASE}
       - POSTGRES_USER=${DATABASE_USERNAME}

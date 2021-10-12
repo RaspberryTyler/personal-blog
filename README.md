@@ -44,8 +44,6 @@ My todo list for tomorrow:
 
 - Maybe use non-root user in Rails dockerfile
 
-- Move blogs from current site to this Docker branch
-
 - Create repos on Docker Hub
 - Configure Ansible setup script
 - Configure Terraform setup script

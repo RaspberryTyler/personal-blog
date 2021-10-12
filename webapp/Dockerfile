@@ -25,6 +25,10 @@ COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]
 
+# Add non-root user
+RUN adduser -u 1000 --disabled-password --gecos "" appuser && chown -R appuser /srv/app
+USER appuser
+
 CMD ["bin/rails", "server", "-b", "0.0.0.0"]
 
 ###############
@@ -40,7 +44,7 @@ RUN bundle install
 COPY package.json yarn.lock ./
 RUN yarn
 
-COPY . .
+COPY --chown=appuser . .
 
 # https://devcenter.heroku.com/articles/deploying-rails-applications-with-the-puma-web-server#procfile
 CMD ["bundle", "exec", "puma", "-C", "config/puma.rb"]

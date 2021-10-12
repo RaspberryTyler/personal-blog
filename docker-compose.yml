@@ -18,7 +18,7 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - ./webapp:/app
+      - ./webapp:/srv/app
     depends_on:
       - database
     networks:
@@ -35,11 +35,14 @@ services:
       - APP_URL=${APP_URL}
     ports:
       - "8080:8080"
+      - "80:80"
     volumes:
       - ./webserver/Caddyfile:/etc/caddy/Caddyfile
       - ./webapp/public:/srv/app/public
       - caddy_data:/data
       - caddy_config:/config
+    networks:
+      - tinkerlog
 
   database:
     container_name: tinkerlog-db

@@ -3,7 +3,7 @@
 #####################
 FROM ruby:3.0.2 as development
 
-WORKDIR /app
+WORKDIR /srv/app
 EXPOSE 3000
 
 # Install Node

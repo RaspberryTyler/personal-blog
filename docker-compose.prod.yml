@@ -13,6 +13,8 @@ services:
       - MASTER_KEY=${MASTER_KEY}
     ports:
       - 3000:3000
+    cap_add:
+      - NET_BIND_SERVICE
     depends_on:
       - database
     networks:
@@ -25,11 +27,15 @@ services:
     environment:
       - APP_URL=${APP_URL}
     ports:
-      - "80:80"
-      - "443:443"
+      # - "80:80"
+      # - "443:443"
+      - "8080:8080"
     volumes:
+      # - ./webserver/Caddyfile:/etc/caddy/Caddyfile
       - caddy_data:/data
       - caddy_config:/config
+    networks:
+      - tinkerlog
 
   database:
     container_name: tinkerlog-db
@@ -51,3 +57,5 @@ networks:
 
 volumes:
   tinkerlog-database:
+  caddy_data:
+  caddy_config:

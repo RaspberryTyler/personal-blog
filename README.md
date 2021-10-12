@@ -42,7 +42,6 @@ The read me that explains how the rails app works is in the Rails folder. This d
 
 My todo list for tomorrow:
 
-- Figure out if that hosts thing I added to the config was actually necessary
 - Maybe use non-root user in Rails dockerfile
 - Figure out what to do with rbenv files and vars
 

@@ -40,7 +40,6 @@ COPY package.json yarn.lock ./
 RUN yarn
 
 COPY . .
-RUN bin/rails assets:precompile
 
 # https://devcenter.heroku.com/articles/deploying-rails-applications-with-the-puma-web-server#procfile
 CMD ["bundle", "exec", "puma", "-C", "config/puma.rb"]

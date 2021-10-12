@@ -4,38 +4,48 @@ version: "3.9"
 
 services:
   webapp:
-    container_name: tinkerlog-web
+    container_name: tinkerlog-webapp
+    image: "tylerlwsmith/tinkerlog-webapp:${BUILD_TAG:-latest}"
     image: tylerlwsmith:tinkerlog
-    restart: always
+    # restart: always
     build:
       context: ./webapp
-      target: production
+      target: development
     environment:
       - RAILS_ENV=development
+      - RAILS_BASE_URL=${APP_URL}
+      - RAILS_SERVE_STATIC_FILES=true
+      - DISABLE_DATABASE_ENVIRONMENT_CHECK=1
     ports:
       - 3000:3000
     volumes:
-      - ./rails:/app
+      - ./webapp:/app
     depends_on:
       - database
     networks:
       - tinkerlog
 
-  webserver:
-    restart: always
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - webapp/Caddyfile:/etc/caddy/Caddyfile
-      - $PWD/site:/srv
-      - caddy_data:/data
-      - caddy_config:/config
+  # webserver:
+  #   container_name: tinkerlog-webserver
+  #   image: "tylerlwsmith/tinkerlog-webserver:${BUILD_TAG:-latest}"
+  #   # restart: always
+  #   build:
+  #     context: ./webserver
+  #     target: development
+  #   environment:
+  #     - APP_URL=${APP_URL}
+  #   ports:
+  #     - "8080:8080"
+  #   volumes:
+  #     - ./webserver/Caddyfile:/etc/caddy/Caddyfile
+  #     - ./webapp/public:/srv/app/public
+  #     - caddy_data:/data
+  #     - caddy_config:/config
 
   database:
     container_name: tinkerlog-db
     image: postgres:13.4-alpine
-    restart: always
+    # restart: always
     environment:
       - POSTGRES_DB=${DATABASE}
       - POSTGRES_USER=${DATABASE_USERNAME}
@@ -52,3 +62,5 @@ networks:
 
 volumes:
   tinkerlog-database:
+  caddy_data:
+  caddy_config:

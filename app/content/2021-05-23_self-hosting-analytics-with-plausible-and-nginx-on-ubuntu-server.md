@@ -210,7 +210,7 @@ server {
 Next, link the site config to the `sites-enabled` folder.
 
 ```sh
-sudo ln /etc/nginx/site-available/your-site.com /etc/nginx/sites-enabled
+sudo ln /etc/nginx/sites-available/your-site.com /etc/nginx/sites-enabled
 ```
 
 Confirm that the configuration syntax is correct:

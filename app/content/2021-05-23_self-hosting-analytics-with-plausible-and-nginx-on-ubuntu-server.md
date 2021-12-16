@@ -1,5 +1,5 @@
 ---
-title: Self hosting analytics with Plausible & NGINX on Ubuntu Server
+title: Self-hosting analytics with Plausible & NGINX on Ubuntu Server
 slug: self-hosting-analytics-with-plausible-and-nginx-on-ubuntu-server
 published: 2021-05-23
 ---

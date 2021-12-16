@@ -4,7 +4,7 @@ slug: self-hosting-analytics-with-plausible-and-nginx-on-ubuntu-server
 published: 2021-05-23
 ---
 
-Self-hosting is something that I find appealing. I want to have ownership of my data and services. Unfortunately, self-hosting is often impractical and expensive, but that shouldn't stop me from experimenting. In that spirit, I've decided to self-host this blog's analytics with Plausible. [You can view this sites public Plausible analytics dashboard here](https://analytics.tinkerlog.dev/tinkerlog.dev).
+Self-hosting is something that I find appealing. I want to have ownership of my data and services. Unfortunately, self-hosting is often impractical and expensive, but that shouldn't stop me from experimenting. In that spirit, I've decided to self-host this blog's analytics with Plausible. [You can view this site's public Plausible analytics dashboard here](https://analytics.tinkerlog.dev/tinkerlog.dev).
 
 Plausible is a privacy-focused Google Analytics alternative. It's lightweight and straight-to-the-point. While it seemingly only has 1/10th of the features of Google Analytics, they're the Analytics features that I use most often.
 

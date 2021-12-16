@@ -289,6 +289,25 @@ OpenSSH (v6)               ALLOW       Anywhere (v6)
 Nginx Full (v6)            ALLOW       Anywhere (v6)
 ```
 
+## A note about Docker and firewall security 
+
+It's worth mentioning that any ports exposed by Docker can bypass the UFW firewall. In the case of Plausible, the only port that's exposed by Docker is for the Plausible web server, which means you can access it from the browser by using your server's IP address plus `:8000` (example: `143.198.111.211:8000`). This isn't the end of the world: you're not exposing any of the data stored in the database. It just means that if anyone were to visit the web server directly, their traffic would be unencrypted. Even still, it's worth knowing that Docker bypasses the system firewall.
+
+If you leave this as it is, everything will probably be fine and you can move onto the next step. However, if you want to lock port 8000 down, you have a few options.
+
+One option is using a network firewall. DigitalOcean and Linode both have network firewalls available in their dashboards, and they can be configured via the dashboard user interface. On DigitalOcean, I set up the following for my firewall's **Inbound Rules**:
+
+|Type |Protocol|Port Range|Sources              |
+|-----|--------|----------|---------------------|
+|ICMB |ICMB    |          | All IPV4 / All IPV6 |
+|SSH  |TCP     |22        | All IPV4 / All IPV6 |
+|HTTP |TCP     |80        | All IPV4 / All IPV6 |
+|HTTPS|TCP     |443       | All IPV4 / All IPV6 |
+
+Using a network firewall is the most surefire method of locking down exposed Docker ports. However, Reddit user [ameer3141 suggested binding the port to localhost](https://www.reddit.com/r/docker/comments/m0opla/how_do_i_prevent_docker_bypassing_ufw_on_a_ubuntu/gqbgbtd/), which would prevent external devices from accessing it even if there was no firewall.
+
+You can do this by opening `docker-compose.yml` using `nano docker-compose.yml`, changing the line that says `- 8000:8000` to `- 127.0.0.1:8000:8000`, then saving the file. After that, run `docker-compose down` then `docker-compose up -d`. I haven't read about this method in depth, but it seems to work from my testing.
+
 ## Logging into Plausible
 
 Visit the URL that you set up for Plausible, then log in with the user credentials you created in `plausible-conf.env`.
